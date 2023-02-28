@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Tahoma;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .head {
+            height: 100vh;
+            width: 60%;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        .head p {
+            font-size: 35px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .btb {
+            margin: 0 auto;
+            height: 50px;
+            width: 190px;
+            background: #8498CB;
+            color: white;
+            border: white;
+        }
+
+        .btb p {
+
+        }
+
+        span {
+            color: #00B0F0;
+            font-weight: bolder;
+        }
+        .button{
+            background-color: transparent;
+            position: relative;
+            overflow: hidden;
+            height: 60px;
+            width: 200px;
+            border: none;
+            font-size: 15px;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .button::before{
+            content: "";
+            background: linear-gradient(to right,
+            #ff7777,#d98eff,#77deff);
+            position: absolute;
+            inset: 0;
+            width: 200%;
+            z-index: -1;
+            transition: left  500ms;
+        }
+
+        .button:hover::before{
+            left: -100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="head">
+        <button class="btb" style="margin-top: 20px;margin-bottom: 20px">190x50</button>
+        <p>Best <span>Shared Hosting</span> Company</p>
+        <p style="font-size: 18px">With this responsive landing page template, you can promote your all hosting, domain
+            and email services.</p>
+        <button class="button" style="margin-top: 20px;margin-bottom: 20px;margin-right: 20px" >Views Plans</button>
+        <button class="button" style="margin-top: 20px;margin-bottom: 20px">All Features</button>
+    </div>
+</div>
+</body>
+</html>
