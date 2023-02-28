@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            font-family: Arial;
+            box-sizing: border-box;
+        }
+        body{
+            background: #F8F8F8;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        hr{
+            width: 5%;
+            margin: 0 auto;
+            background: cadetblue;
+            border: white;
+        }
+        h1{
+            text-align: center;
+        }
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        #menu{
+            height: 30px;
+            padding:0;
+            margin:0;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #menu ul, #menu li{
+            padding:0;
+            margin:0;
+        }
+
+        #menu li{
+            position: relative;
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding:0;
+        }
+
+        #menu li a{
+            width:130px;
+            height: 30px;
+            display: block;
+            text-decoration:none;
+            text-align: center;
+            line-height: 30px;
+            color: black;
+            font-weight: bold;
+        }
+
+        #menu ul ul li a{
+            width: 200px;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        #menu li a:hover{
+            color: cadetblue;
+        }
+
+        #menu ul ul{
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            visibility: hidden;
+        }
+
+        #menu ul li:hover ul{
+            visibility: visible;
+        }
+        img{
+            width: 476px;
+            height: 380px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="col-12">
+    <div class="row">
+        <h1>MY PORTFOLIO</h1>
+        <hr style="height: 3px" class="bg-warning">
+    </div>
+</div>
+<div class="col-12">
+    <div class="row">
+        <div id="menu">
+            <ul>
+                <li><a href="#">All</a></li>
+                <li><a href="#">Web App</a></li>
+                <li><a href="#">UI/UX</a></li>
+                <li><a href="#">Graphics Design</a></li>
+                <li><a href="#">Mobile App</a></li>
+                <li><a href="#">Branding</a></li>
+                <li><a href="#">Marketing</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-12" style="background: white">
+    <div class="row">
+        <div class="col-4">
+            <img src="https://thuvienanime.com/wp-content/uploads/2022/11/Pikachu.jpg" alt="">
+        </div>
+        <div class="col-4">
+            <img src="https://thuvienanime.com/wp-content/uploads/2022/11/Pikachu.jpg" alt="">
+        </div>
+        <div class="col-4">
+            <img src="https://thuvienanime.com/wp-content/uploads/2022/11/Pikachu.jpg" alt="">
+        </div>
+    </div>
+</div>
+<div class="col-12" style="background: white">
+    <div class="row">
+        <div class="col-4">
+            <img src="https://thuvienanime.com/wp-content/uploads/2022/11/Pikachu.jpg" alt="">
+        </div>
+        <div class="col-4">
+            <img src="https://thuvienanime.com/wp-content/uploads/2022/11/Pikachu.jpg" alt="">
+        </div>
+        <div class="col-4">
+            <img src="https://thuvienanime.com/wp-content/uploads/2022/11/Pikachu.jpg" alt="">
+        </div>
+    </div>
+</div>
+<div class="col-12" style="background: white">
+    <div class="row">
+        <div class="col-4">
+            <img src="https://thuvienanime.com/wp-content/uploads/2022/11/Pikachu.jpg" alt="">
+        </div>
+        <div class="col-4">
+            <img src="https://thuvienanime.com/wp-content/uploads/2022/11/Pikachu.jpg" alt="">
+        </div>
+        <div class="col-4">
+            <img src="https://thuvienanime.com/wp-content/uploads/2022/11/Pikachu.jpg" alt="">
+        </div>
+    </div>
+</div>
+</body>
+</html>
