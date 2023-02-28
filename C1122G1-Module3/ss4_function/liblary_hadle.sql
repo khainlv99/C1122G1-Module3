@@ -37,8 +37,8 @@ select name, count(borrows.id) as muon
 from students 
 join borrows on students.id = borrows.student_id
 where students.id
-group by students.name
-order by muon desc;
+group by students.id
+order by muon asc;
 
 -- - Lấy ra các học viên mượn sách nhiều nhất của thư viện				
 select name, count(borrows.id) as muon
