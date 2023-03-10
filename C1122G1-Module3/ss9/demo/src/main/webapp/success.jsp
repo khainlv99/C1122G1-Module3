@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-  <h2>Admin đăng nhập thành công</h2>
+  <h2>admin đăng nhập thành công vào lúc XXXX</h2>
 </body>
 </html>

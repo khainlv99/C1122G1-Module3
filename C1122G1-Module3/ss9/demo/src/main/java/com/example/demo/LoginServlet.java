@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
         PrintWriter writer = response.getWriter();
         writer.println("<html>");
         if ("admin".equals(username) && "123abc".equals(password)) {
-            writer.println("<h1>Welcome " + username + " to website</h1>");
+            request.getRequestDispatcher("success.jsp").forward(request,response);
         } else {
             writer.println("<h1>Login Error</h1>");
         }
