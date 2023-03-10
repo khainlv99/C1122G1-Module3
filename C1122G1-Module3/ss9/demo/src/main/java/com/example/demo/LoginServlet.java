@@ -15,14 +15,15 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String user = request.getParameter("user");
-        String pass = request.getParameter("pass");
-        if (user.equals("admin") && pass.equals("123abc")) {
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        PrintWriter writer = response.getWriter();
+        writer.println("<html>");
+        if ("admin".equals(username) && "123abc".equals(password)) {
+            writer.println("<h1>Welcome " + username + " to website</h1>");
         } else {
-            String src = "Tên đăng nhập hoặc mật khẩu không đúng";
-            request.setAttribute("src", src);
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            writer.println("<h1>Login Error</h1>");
         }
+        writer.println("</html>");
     }
 }
