@@ -11,6 +11,13 @@
     <title>Title</title>
 </head>
 <body>
-  <h2>admin đăng nhập thành công vào lúc XXXX</h2>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%
+    Date date = new Date();
+    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    String formattedDate = formatter.format(date);
+%>
+<p>admin đăng nhập thành công vào lúc: <%= formattedDate %></p>
 </body>
 </html>
