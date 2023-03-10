@@ -11,9 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<div class="container" style="border: 1px double black; text-align: center; margin-top: 69px;">
-  <h1 style="font-family: 'Kanit', sans-serif;color: crimson;" >THÔNG BÁO</h1>
   <h2>Admin đăng nhập thành công</h2>
-</div>
 </body>
 </html>
