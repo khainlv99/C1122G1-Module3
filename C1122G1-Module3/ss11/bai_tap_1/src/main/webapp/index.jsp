@@ -34,6 +34,7 @@
         <td>${book.category}</td>
         <td>
             <a href="/book?action=create">Create</a>
+            <a href="/book?action=update&id=${book.id}">Update</a>
         </td>
     </tr>
     </c:forEach>

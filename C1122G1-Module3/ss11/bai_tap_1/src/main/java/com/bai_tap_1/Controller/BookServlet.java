@@ -26,12 +26,19 @@ public class BookServlet extends HttpServlet {
             case "delete":
                 showDeleteBook(request,response);
                 break;
+            case "update":
+                showUpdateBook(request,response);
+                break;
             case "add":
                 break;
             default:
                 listBook(request,response);
                 break;
         }
+    }
+
+    private void showUpdateBook(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.sendRedirect("update.jsp");
     }
 
     private void showDeleteBook(HttpServletRequest request, HttpServletResponse response) {
@@ -78,6 +85,8 @@ public class BookServlet extends HttpServlet {
             case "edit":
                 updateBook(request, response);
                 break;
+            case "update":
+
             case "delete":
                 deleteBook(request, response);
                 break;

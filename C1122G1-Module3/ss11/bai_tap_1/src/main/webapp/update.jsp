@@ -20,7 +20,7 @@
 <p>
   <a href="/book">Back to customer list</a>
 </p>
-<form method="post" action="/book?action=update">
+<form method="post" action="/book?action=update&id=${book.id}">
   <fieldset>
     <legend>Book information</legend>
     <table>

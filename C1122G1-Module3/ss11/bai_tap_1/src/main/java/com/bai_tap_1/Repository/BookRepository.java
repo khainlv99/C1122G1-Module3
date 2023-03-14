@@ -27,12 +27,23 @@ public class BookRepository implements IBookRepository {
 
     @Override
     public Book findById(int id) {
-        return bookList.get(id);
+        for (Book a: bookList
+             ) {
+            if (a.getId().equals(id)){
+                return a;
+            }
+        }
+        return null;
     }
 
     @Override
     public void update(int id, Book book) {
-        bookList.add(id, book);
+       Book book1 = findById(id);
+       book1.setTitle(book.getTitle());
+       book1.setPageSize(book.getPageSize());
+       book1.setAuthor(book.getAuthor());
+       book1.setCategory(book.getCategory());
+       bookList.set(id,book1);
     }
 
     @Override
