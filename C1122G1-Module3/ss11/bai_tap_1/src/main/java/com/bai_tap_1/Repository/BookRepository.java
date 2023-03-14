@@ -37,6 +37,12 @@ public class BookRepository implements IBookRepository {
 
     @Override
     public void remove(int id) {
-        bookList.remove(id);
+        for (Book a: bookList
+             ) {
+            if (a.getId() == id){
+                bookList.remove(a);
+                break;
+            }
+        }
     }
 }
