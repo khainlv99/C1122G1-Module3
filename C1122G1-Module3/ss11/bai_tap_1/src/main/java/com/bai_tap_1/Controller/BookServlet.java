@@ -98,7 +98,7 @@ public class BookServlet extends HttpServlet {
             this.bookService.update(id, book);
             request.setAttribute("customer", book);
             request.setAttribute("message", "Book information was updated");
-            dispatcher = request.getRequestDispatcher("edit.jsp");
+            dispatcher = request.getRequestDispatcher("update.jsp");
         }
         try {
             dispatcher.forward(request, response);
