@@ -22,6 +22,9 @@ public class HelloServlet extends HttpServlet {
         studentList.add(new Student(3,"Khải dã man","nam",60));
         studentList.add(new Student(4,"Khải very good","nam",50));
         studentList.add(new Student(5,"Khải số 1","nam",75));
+        if(studentList.size()==0){
+            request.setAttribute("errow","Danh sách rỗng");
+        }
         request.setAttribute("listStudent", studentList);
         request.getRequestDispatcher("index.jsp").forward(request,response);
     }

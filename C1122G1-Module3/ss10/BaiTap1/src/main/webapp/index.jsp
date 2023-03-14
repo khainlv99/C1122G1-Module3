@@ -13,6 +13,7 @@
 </head>
 <body>
 <form action="/student">
+<p class="text-center text-danger">${errow}</p>
 <table class="table">
     <tr>
         <th>Mã học viên</th>
