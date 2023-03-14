@@ -20,16 +20,16 @@ public class BookService implements IBookService {
 
     @Override
     public Book findById(int id) {
-        return null;
+        return iBookRepository.findById(id);
     }
 
     @Override
     public void update(int id, Book book) {
-
+        iBookRepository.update(id,book);
     }
 
     @Override
     public void remove(int id) {
-
+        iBookRepository.remove(id);
     }
 }

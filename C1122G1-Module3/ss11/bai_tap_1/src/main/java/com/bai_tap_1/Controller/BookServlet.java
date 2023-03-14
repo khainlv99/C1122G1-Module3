@@ -43,7 +43,73 @@ public class BookServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = "";
+        }
+        switch (action) {
+            case "create":
+                createBook(request, response);
+                break;
+            case "edit":
+                updateBook(request, response);
+                break;
+            case "delete":
+                deleteBook(request, response);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void deleteBook(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Book book = this.bookService.findById(id);
+        RequestDispatcher dispatcher;
+        if (book == null) {
+            dispatcher = request.getRequestDispatcher("error-404.jsp");
+        } else {
+            this.bookService.remove(id);
+            try {
+                response.sendRedirect("/book");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void updateBook(HttpServletRequest request, HttpServletResponse response) throws IOException {
 //        id, title, pageSize, author, category
+        int id = Integer.parseInt(request.getParameter("id"));
+        String title = request.getParameter("title");
+        int pageSize = Integer.parseInt(request.getParameter("pageSize"));
+        String author = request.getParameter("author");
+        String category = request.getParameter("category");
+        Book book = this.bookService.findById(id);
+        RequestDispatcher dispatcher;
+        if (book == null) {
+            dispatcher = request.getRequestDispatcher("error-404.jsp");
+        } else {
+            book.setTitle(title);
+            book.setPageSize(pageSize);
+            book.setAuthor(author);
+            book.setCategory(category);
+            this.bookService.update(id, book);
+            request.setAttribute("customer", book);
+            request.setAttribute("message", "Book information was updated");
+            dispatcher = request.getRequestDispatcher("edit.jsp");
+        }
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void createBook(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         String title = request.getParameter("title");
         int pageSize =  Integer.parseInt(request.getParameter("pageSize"));

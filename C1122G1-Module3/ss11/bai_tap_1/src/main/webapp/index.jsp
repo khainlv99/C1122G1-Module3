@@ -32,9 +32,8 @@
         <td>${book.pageSize}</td>
         <td>${book.author}</td>
         <td>${book.category}</td>
-        <td><button>Create</button>
-            <button>Delete</button>
-            <button>Update</button>
+        <td>
+            <a href="/book?action=create">Create</a>
         </td>
     </tr>
     </c:forEach>

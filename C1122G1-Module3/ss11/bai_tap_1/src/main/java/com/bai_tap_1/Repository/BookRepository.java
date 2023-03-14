@@ -27,16 +27,16 @@ public class BookRepository implements IBookRepository {
 
     @Override
     public Book findById(int id) {
-        return null;
+        return bookList.get(id);
     }
 
     @Override
     public void update(int id, Book book) {
-
+        bookList.add(id, book);
     }
 
     @Override
     public void remove(int id) {
-
+        bookList.remove(id);
     }
 }
