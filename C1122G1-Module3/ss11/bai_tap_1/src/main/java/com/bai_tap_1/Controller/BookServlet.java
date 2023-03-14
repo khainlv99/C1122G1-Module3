@@ -23,6 +23,9 @@ public class BookServlet extends HttpServlet {
             case "create":
                 showCreateBook(request,response);
                 break;
+            case "delete":
+                showDeleteBook(request,response);
+                break;
             case "add":
                 break;
             default:
@@ -30,6 +33,26 @@ public class BookServlet extends HttpServlet {
                 break;
         }
     }
+
+    private void showDeleteBook(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Book book = this.bookService.findById(id);
+        RequestDispatcher dispatcher;
+        if(book == null){
+            dispatcher = request.getRequestDispatcher("error-404.jsp");
+        } else {
+            request.setAttribute("book", book);
+            dispatcher = request.getRequestDispatcher("delete.jsp");
+        }
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     private void showCreateBook(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.sendRedirect("create.jsp");
