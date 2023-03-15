@@ -44,4 +44,30 @@ public class BookRepository implements IBookRepository{
         }
         return books;
     }
+    public void save(Book book){
+        Connection connection = DBConnection.getConnection();
+        PreparedStatement statement = null;
+        if (connection!= null){
+            try {
+                statement = connection.prepareStatement("insert into books(id,name,page_size,author_id,category_id) value (?,?,?,?,?)");
+                statement.setInt(1,book.getId());
+                statement.setString(2,book.getName());
+                statement.setInt(3,book.getPageSize());
+                statement.setInt(4,book.getAuthorId());
+                statement.setInt(5,book.getCategoryId());
+                statement.executeQuery();
+
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }finally {
+                try {
+                    statement.close();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+                DBConnection.close();
+            }
+        }
+
+    }
 }

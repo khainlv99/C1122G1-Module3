@@ -2,10 +2,7 @@ package com.example.bai_tap1.Repository;
 
 import com.example.bai_tap1.Model.Book;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,6 +56,19 @@ public class BookRepository implements IBookRepository{
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+    public static List<Book> delete(int id){
+        Connection connection = DBConnection.getConnection();
+        CallableStatement statement = null;
+        List<Book> books = new ArrayList<>();
+        try {
+            statement = connection.prepareCall("call deleteBook(?)");
+            statement.setInt(1,id);
+            statement.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return books;
     }
 
     public static void main(String[] args) {
