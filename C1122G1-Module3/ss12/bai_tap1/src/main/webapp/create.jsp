@@ -15,7 +15,7 @@
   <form method="post">
     <table border="1" cellpadding="5">
       <caption>
-        <h2>Add New User</h2>
+        <h2>Add New Book</h2>
       </caption>
       <tr>
         <th>Name:</th>
@@ -26,19 +26,19 @@
       <tr>
         <th>Page:</th>
         <td>
-          <input type="text" name="email" id="email" size="45"/>
+          <input type="text" name="pageSize" id="email" size="45"/>
         </td>
       </tr>
       <tr>
         <th>Author:</th>
         <td>
-          <input type="text" name="country" size="15"/>
+          <input type="text" name="authorId" size="15"/>
         </td>
       </tr>
       <tr>
         <th>Category:</th>
         <td>
-          <input type="text" name="country" size="15"/>
+          <input type="text" name="categoryId" size="15"/>
         </td>
       </tr>
       <tr>
