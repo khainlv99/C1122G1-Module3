@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bai_tap1/Repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bai_tap1/Repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/create.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss13/bai_tap1/src/main/java/com/example/bai_tap1/Repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss13/bai_tap1/src/main/java/com/example/bai_tap1/Repository/BookRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678848716283</updated>
       <workItem from="1678848717372" duration="3143000" />
-      <workItem from="1678854999545" duration="332000" />
+      <workItem from="1678854999545" duration="578000" />
     </task>
     <servers />
   </component>

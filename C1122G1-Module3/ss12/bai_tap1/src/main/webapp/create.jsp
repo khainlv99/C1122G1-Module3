@@ -11,6 +11,43 @@
     <title>Title</title>
 </head>
 <body>
-
+<div align="center">
+  <form method="post">
+    <table border="1" cellpadding="5">
+      <caption>
+        <h2>Add New User</h2>
+      </caption>
+      <tr>
+        <th>Name:</th>
+        <td>
+          <input type="text" name="name" id="name" size="45"/>
+        </td>
+      </tr>
+      <tr>
+        <th>Page:</th>
+        <td>
+          <input type="text" name="email" id="email" size="45"/>
+        </td>
+      </tr>
+      <tr>
+        <th>Author:</th>
+        <td>
+          <input type="text" name="country" size="15"/>
+        </td>
+      </tr>
+      <tr>
+        <th>Category:</th>
+        <td>
+          <input type="text" name="country" size="15"/>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="Save"/>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
 </body>
 </html>
