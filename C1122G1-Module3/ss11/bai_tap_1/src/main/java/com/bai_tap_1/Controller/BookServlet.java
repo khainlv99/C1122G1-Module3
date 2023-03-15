@@ -31,10 +31,22 @@ public class BookServlet extends HttpServlet {
                 break;
             case "add":
                 break;
+            case "edit":
+                showEditBook(request,response);
+                break;
             default:
                 listBook(request,response);
                 break;
         }
+    }
+
+    private void showEditBook(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+//        User existingUser = userDAO.selectUser(id);
+        Book book = bookService.findById(id);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("edit.jsp");
+        request.setAttribute("book", book);
+        dispatcher.forward(request, response);
     }
 
     private void showUpdateBook(HttpServletRequest request, HttpServletResponse response) throws IOException {

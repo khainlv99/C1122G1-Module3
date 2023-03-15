@@ -38,12 +38,11 @@ public class BookRepository implements IBookRepository {
 
     @Override
     public void update(int id, Book book) {
-       Book book1 = findById(id);
-       book1.setTitle(book.getTitle());
-       book1.setPageSize(book.getPageSize());
-       book1.setAuthor(book.getAuthor());
-       book1.setCategory(book.getCategory());
-       bookList.set(id,book1);
+        for (int i = 0; i < bookList.size(); i++) {
+            if (bookList.get(i).getId() == id) {
+                bookList.set(i, book);
+            }
+        }
     }
 
     @Override
