@@ -13,4 +13,19 @@ public class BookService implements IBookService{
     public List<Book> findAll() {
         return iBookRepository.findAll();
     }
+
+    @Override
+    public boolean deleteUser(int id) {
+        return iBookRepository.deleteUser(id);
+    }
+
+    @Override
+    public void insertUser(Book user) {
+
+    }
+
+    @Override
+    public Book selectUser(int id) {
+        return iBookRepository.selectUser(id);
+    }
 }
