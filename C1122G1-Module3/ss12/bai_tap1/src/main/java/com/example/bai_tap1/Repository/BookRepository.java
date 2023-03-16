@@ -47,7 +47,7 @@ public class BookRepository implements IBookRepository {
     }
 
     @Override
-    public boolean deleteUser(int id) {
+    public boolean deleteBook(int id) {
         boolean rowDeleted;
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement("delete from books where id = ?");) {
@@ -76,7 +76,7 @@ public class BookRepository implements IBookRepository {
     }
 
     @Override
-    public Book selectUser(int id) {
+    public Book selectBook(int id) {
         Book book = null;
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement("insert into books(id,name,page_size,author_id,category_id) value (?,?,?,?,?)");) {

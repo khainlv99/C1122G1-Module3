@@ -20,6 +20,48 @@ public class HelloServlet extends HttpServlet {
     public void init() {
         message = "Hello World!";
     }
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = "";
+        }
+        switch (action) {
+            case "create":
+                createBook(request, response);
+                break;
+            case "edit":
+                updateBook(request, response);
+                break;
+            case "delete":
+                deleteBook(request, response);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void deleteBook(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Book book = this.iBookService.selectBook(id);
+        RequestDispatcher dispatcher;
+        if (book == null) {
+            dispatcher = request.getRequestDispatcher("error-404.jsp");
+        } else {
+            this.iBookService.deleteBook(id);
+            try {
+                response.sendRedirect("/book");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void updateBook(HttpServletRequest request, HttpServletResponse response) {
+    }
+
+    private void createBook(HttpServletRequest request, HttpServletResponse response) {
+
+    }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String action = request.getParameter("action");
@@ -35,7 +77,7 @@ public class HelloServlet extends HttpServlet {
                 showEditForm(request, response);
                 break;
             case "delete":
-                deleteBook(request, response);
+                showDeleteBook(request, response);
                 break;
             case "search":
                 showSearchForm(request, response);
@@ -66,10 +108,9 @@ public class HelloServlet extends HttpServlet {
         
     }
 
-    private void deleteBook(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void showDeleteBook(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         iBookService.deleteUser(id);
-
         List<Book> books = iBookService.findAll();
         request.setAttribute("book", books);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");

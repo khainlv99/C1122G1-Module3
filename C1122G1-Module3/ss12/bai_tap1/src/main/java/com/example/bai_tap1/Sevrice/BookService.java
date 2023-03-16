@@ -15,8 +15,8 @@ public class BookService implements IBookService{
     }
 
     @Override
-    public boolean deleteUser(int id) {
-        return iBookRepository.deleteUser(id);
+    public boolean deleteBook(int id) {
+        return iBookRepository.deleteBook(id);
     }
 
     @Override
@@ -25,7 +25,7 @@ public class BookService implements IBookService{
     }
 
     @Override
-    public Book selectUser(int id) {
-        return iBookRepository.selectUser(id);
+    public Book selectBook(int id) {
+        return iBookRepository.selectBook(id);
     }
 }

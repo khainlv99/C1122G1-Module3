@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d04aa3f-0bcf-435d-9014-cc97a9794597" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/search.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bai_tap1/Controller/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bai_tap1/Controller/HelloServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bai_tap1/Repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bai_tap1/Repository/BookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bai_tap1/Repository/IBookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bai_tap1/Repository/IBookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bai_tap1/Sevrice/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bai_tap1/Sevrice/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bai_tap1/Sevrice/IBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bai_tap1/Sevrice/IBookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss13/bai_tap1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss13/bai_tap1/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +21,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="bai_tap1" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,7 +79,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/USER/Documents/C1022G1-NguyenLeVanKhai/module_3/ss12/ThucHanh",
+    "last_opened_file_path": "C:/Users/USER/Documents/C1022G1-NguyenLeVanKhai/module_3/ss11",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -173,7 +187,8 @@
       <updated>1678848716283</updated>
       <workItem from="1678848717372" duration="3143000" />
       <workItem from="1678854999545" duration="1265000" />
-      <workItem from="1678933406288" duration="3233000" />
+      <workItem from="1678933406288" duration="3816000" />
+      <workItem from="1678940681606" duration="490000" />
     </task>
     <servers />
   </component>
