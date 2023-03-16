@@ -57,6 +57,32 @@ public class HelloServlet extends HttpServlet {
     }
 
     private void updateBook(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        int pageSize = Integer.parseInt(request.getParameter("page_size"));
+        int authour = Integer.parseInt(request.getParameter("author_id"));
+        int category = Integer.parseInt(request.getParameter("category_id"));
+        Book book = this.iBookService.selectBook(id);
+        RequestDispatcher dispatcher;
+        if (book == null) {
+            dispatcher = request.getRequestDispatcher("error-404.jsp");
+        } else {
+            book.setName(name);
+            book.setPageSize(pageSize);
+            book.setAuthorId(authour);
+            book.setCategoryId(category);
+            this.iBookService.insertUser(book);
+            request.setAttribute("book", book);
+            request.setAttribute("message", "Customer information was updated");
+            dispatcher = request.getRequestDispatcher("edit.jsp");
+        }
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void createBook(HttpServletRequest request, HttpServletResponse response) {
